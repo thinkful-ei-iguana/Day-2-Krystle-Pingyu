@@ -1,30 +1,11 @@
-'strict mode'
+'use strict';
 
-function max(numbers) {
-    let maxNum = numbers[0];
-    let i = 0;
-    while (i < numbers.length) {
-        i++;
-        if (numbers[i] > maxNum) {
-            maxNum = numbers[i];
-        }
-    }
-    return maxNum;
+function average(numbers) {
+    let sum = 0;
+    numbers.forEach(num => {
+        sum += num;
+    });
+    return sum / numbers.length;
 }
 
-function min(numbers) {
-    let maxNum = numbers[0];
-    let i = 0;
-    while (i < numbers.length) {
-        i++;
-        if (numbers[i] < maxNum) {
-            maxNum = numbers[i];
-        }
-    }
-    return maxNum;
-
-}
-
-console.log(max([-5, 28, 98, -20013, 0.7878, 22, 115]));
-
-console.log(min([-5, 28, 98, -20013, 0.7878, 22, 115]));
+average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
