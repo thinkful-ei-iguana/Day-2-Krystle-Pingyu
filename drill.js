@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 function repeat(fn, n) {
     let result = '';
     for (let i = 0; i < n; i++) {
@@ -60,3 +61,52 @@ rocksWarning('Main St and Pacific Ave');
 // => The Rocks on the Road hazard has triggered 1 time(s) today!
 
 rocksWarning('Centinela Ave and Olympic Blvd');
+*/
+
+console.log([
+    [0, 0],
+    [0, 5],
+    [-1, -3],
+    [-3, 1],
+    [2, -4],
+    [3, 2]
+].filter(function(arr) {
+    return arr[0] >= 0 && arr[1] >= 0;
+}));
+
+console.log([
+    [0, 0],
+    [0, 5],
+    [-1, -3],
+    [-3, 1],
+    [2, -4],
+    [3, 2]
+].map(function(arr) {
+    return [arr[0] + arr[1]];
+}));
+
+
+let num = 0;
+[
+    [0, 0],
+    [0, 5],
+    [-1, -3],
+    [-3, 1],
+    [2, -4],
+    [3, 2]
+].forEach(function(arr) {
+    num++;
+    console.log(`Movement #${num}: ${arr[0] + arr[1]} steps`);
+});
+
+let str = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+let arr = str.split(' ');
+
+console.log(arr.reduce(function(acc, initialValue) {
+    if (initialValue.length === 3) {
+        acc += ' ';
+    } else {
+        acc += initialValue[initialValue.length - 1].toUpperCase();
+    }
+    return acc;
+}, ''));
