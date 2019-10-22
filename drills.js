@@ -28,3 +28,12 @@ function min(numbers) {
 console.log(max([-5, 28, 98, -20013, 0.7878, 22, 115]));
 
 console.log(min([-5, 28, 98, -20013, 0.7878, 22, 115]));
+
+
+function average(numbers) {
+    let sum = 0;
+  
+    numbers.forEach(number => (sum += number));
+  
+    return sum / numbers.length;
+  }
